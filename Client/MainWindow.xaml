@@ -1,0 +1,36 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Closing="Window_Closing">    
+     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0">
+            <Button Content="Connect" Name="btConn" Width="100" Margin="5" Click="Button_Click" />
+            <Button Content="Disconnect"  Name="btDisConn" Width="100" Margin="5" Click="btDisConn_Click" />
+        </WrapPanel>
+        <Grid Grid.Row="1">            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="1" Name="ChatText" VerticalScrollBarVisibility="Auto"/>
+            <ListView Grid.Column="0" Name="ListView"/>
+        </Grid>        
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="20*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Name="SendText" FontSize="20" VerticalScrollBarVisibility="Auto"/>
+            <Button Grid.Column="1"  Name="Send" Content="Send"  Click="Button_Click_1"/>
+        </Grid>
+        </Grid>    
+</Window>
